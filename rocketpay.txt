@@ -1,0 +1,24 @@
+mix archive.install hex phx_new 1.5.7
+mix phx.new rocketpay --no-webpack --no-html
+
+mix ecto.setup
+mix deps.get
+mix phx.server
+
+iex -S mix // interative elixir inside project
+recompile
+
+= // pattern matching
+[a, b] = [1, 2] // match
+
+defp // private
+
+|> // pipe operator
+alias Rocketpay.Numbers
+Numbers.sum_from_file("Numbers")
+%{val: x} = ${val1: 0, val: 10, val2: 22} // map dá valor ao x
+%{"val" => val}
+
+Stream is like Enum, but mixing and economizing resources
+
+// nice documents
