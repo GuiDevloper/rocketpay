@@ -1,3 +1,4 @@
+#1
 mix archive.install hex phx_new 1.5.7
 mix phx.new rocketpay --no-webpack --no-html
 
@@ -22,3 +23,18 @@ Numbers.sum_from_file("Numbers")
 Stream is like Enum, but mixing and economizing resources
 
 // nice documents
+
+#2
+mix ecto.gen.migration create_user_table
+mix ecto.drop
+mix ecto.create
+mix ecto.migrate
+
+params = %{
+  name: "Guilherme",
+  password: "123456",
+  email: "gui@com",
+  nickname: "gui",
+  age: 27
+}
+params |> Rocketpay.User.changeset() |> Rocketpay.Repo.insert()
