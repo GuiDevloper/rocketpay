@@ -38,3 +38,7 @@ params = %{
   age: 27
 }
 params |> Rocketpay.User.changeset() |> Rocketpay.Repo.insert()
+
+^ // pin operator - valor fixado
+
+mix test --cover
